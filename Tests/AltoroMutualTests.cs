@@ -51,7 +51,8 @@ namespace Tests
             _driver.FindElement(By.Id("_ctl0__ctl0_LoginLink")).Click();
             var element = _driver.FindElement(By.Id("uid"));
             element.Clear();
-            element.SendKeys("admin'--");
+            // sending a single quote is not possible with the Chrome Driver, it sends two single quotes!
+            element.SendKeys("admin'--"); 
 
             element = _driver.FindElement(By.Id("passw"));
             element.Clear();
