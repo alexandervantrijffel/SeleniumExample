@@ -25,7 +25,7 @@ namespace Tests.Utilities
         public string CloseAlertAndGetItsText()
         {
             bool acceptNextAlert = true;
-            
+
             IAlert alert = _driver.SwitchTo().Alert();
             if (acceptNextAlert)
             {
@@ -39,3 +39,4 @@ namespace Tests.Utilities
         }
     }
 }
+
