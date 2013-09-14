@@ -1,0 +1,9 @@
+box: ami-b95e16d0
+box-type: ami
+ami-user: Administrator
+build:
+  steps:
+    - script:
+        name: MSBuild
+        code: |
+          /cygdrive/c/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe
