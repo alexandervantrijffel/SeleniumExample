@@ -12,7 +12,7 @@ To run the Selenium tests, download the solution and run the NUnit tests. All se
 
 The tests are structured according to the [Page Object Pattern](https://code.google.com/p/selenium/wiki/PageObjects).
 
-Out of the box Selenium supports locating elements using the element id or an xpath selector. The extension method FindElementByJQuery has been added to SeleniumExample with which elements can be located using a more versatile JQuery selector. Example:
+Out of the box Selenium supports locating elements using the element id or an xpath selector. The extension method *FindElementByJQuery* has been added to SeleniumExample with which elements can be located using a more versatile JQuery selector. Example:
 
     _driver.FindElementByJQuery("input[name='btnSubmit']")
 
