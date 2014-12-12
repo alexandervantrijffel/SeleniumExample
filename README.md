@@ -1,4 +1,4 @@
-SeleniumExample
+SeleniumExample - Using Selenium with C#.NET
 ===============
 
 This solution demonstrates automated testing web pages with Selenium and C#.NET. It can also be used as a template for new Selenium test projects.
