@@ -63,6 +63,7 @@
     <Compile Include="PageObjects\MainPage.cs" />
     <Compile Include="PageObjects\TransferFundsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeleniumHelpers\SeleniumHelper.cs" />
     <Compile Include="Utilities\ConfigurationHelper.cs" />
     <Compile Include="Utilities\Guard.cs" />
     <Compile Include="SeleniumHelpers\DriverFactory.cs" />
