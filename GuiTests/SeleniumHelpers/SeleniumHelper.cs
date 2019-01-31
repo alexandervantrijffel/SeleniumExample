@@ -35,8 +35,8 @@ namespace Structura.GuiTests.SeleniumHelpers
                 }
                 _driver = new DriverFactory().Create();
                 // Avoid synchronization issues by applying timed delay to each step if necessary
-                _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMinutes((5)));
-                _driver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromMinutes(5));
+                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMinutes((5));
+                _driver.Manage().Timeouts().PageLoad = TimeSpan.FromMinutes(5);
                 return _driver;
             }
         }
