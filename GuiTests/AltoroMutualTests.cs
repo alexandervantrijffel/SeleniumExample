@@ -69,23 +69,23 @@ namespace Structura.GuiTests
         }
         
         [Test]
-        public void TransferAmountShouldBeAccepted()
+        public void RequestGoldenVisaShouldBeAccepted()
         {
             // Arrange
             new LoginPage(_driver).LoginAsAdmin(_baseUrl);
-            var transferFundsPage = new TransferFundsPage(_driver);
+            var page = new RequestGoldVisaPage(_driver);
             new MainPage(_driver).NavigateToTransferFunds();
 
             // Act
-            transferFundsPage.Transfer99Dollar();
+            page.PerformRequest();
 
             // Assert
 
             // Need to wait until the results are displayed on the web page
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             
-            transferFundsPage.TranferMoneyMessage.Text.StartsWith(
-                "$99 was successfully transferred from Account 20 into Account 21"
+            page.SuccessMessage.Text.StartsWith(
+                "Your new Altoro Mutual Gold VISA with a $10000 and 7.9% APR will be sent in the mail."
                 , true, CultureInfo.InvariantCulture).Should().BeTrue();
         }
     }

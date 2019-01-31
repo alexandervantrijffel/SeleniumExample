@@ -17,13 +17,13 @@ namespace Structura.GuiTests.PageObjects
         [FindsBy(How = How.Id, Using = "btnGetAccount")]
         public IWebElement GetAccountButton { get; set; }
 
-        [FindsBy(How = How.Id, Using = "_ctl0__ctl0_Content_MenuHyperLink3")]
+        [FindsBy(How = How.XPath, Using = "//*[@id=\"_ctl0__ctl0_Content_Main_promo\"]/table/tbody/tr[3]/td/a")]
         public IWebElement TransferFundsButton { get; set; }
 
-        public TransferFundsPage NavigateToTransferFunds()
+        public RequestGoldVisaPage NavigateToTransferFunds()
         {
             TransferFundsButton.Click();
-            return new TransferFundsPage(_driver);
+            return new RequestGoldVisaPage(_driver);
         }
     }
 }

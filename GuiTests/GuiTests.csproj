@@ -64,7 +64,7 @@
     <Compile Include="AltoroMutualTests.cs" />
     <Compile Include="PageObjects\LoginPage.cs" />
     <Compile Include="PageObjects\MainPage.cs" />
-    <Compile Include="PageObjects\TransferFundsPage.cs" />
+    <Compile Include="PageObjects\RequestGoldVisaPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeleniumHelpers\SeleniumHelper.cs" />
     <Compile Include="Utilities\ConfigurationHelper.cs" />
