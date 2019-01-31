@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System.Threading;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using Tests.SeleniumHelpers;
 
@@ -14,7 +15,7 @@ namespace Tests.PageObjects
             PageFactory.InitElements(_driver, this);
         }
 
-        [FindsBy(How = How.Id, Using = "_ctl0__ctl0_LoginLink")]
+        [FindsBy(How = How.Id, Using = "AccountLink")]
         public IWebElement SignInLink { get; set; }
 
         [FindsBy(How = How.Id, Using = "uid")]
@@ -23,15 +24,11 @@ namespace Tests.PageObjects
         [FindsBy(How = How.Id, Using = "passw")]
         public IWebElement PasswordField { get; set; }
 
+
         /// <summary>
         /// JQuery selector example
         /// </summary>
-        public IWebElement LoginButton {
-            get
-            {
-                return _driver.FindElementByJQuery("input[name='btnSubmit']");
-            }
-        }
+        public IWebElement LoginButton => _driver.FindElementByJQuery("input[name='btnSubmit']");
 
         public void LoginAsAdmin(string baseUrl)
         {
@@ -51,8 +48,8 @@ namespace Tests.PageObjects
         {
             _driver.Navigate().GoToUrl(baseUrl);
             SignInLink.Click();
+
             UserIdField.Clear();
-            // sending a single quote is not possible with the Chrome Driver, it sends two single quotes!
             UserIdField.SendKeys("nobody");
 
             PasswordField.Clear();
@@ -62,4 +59,3 @@ namespace Tests.PageObjects
         }
     }
 }
-
